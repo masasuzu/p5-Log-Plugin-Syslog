@@ -20,7 +20,7 @@ sub import {
 
     {
         no strict 'refs'; ## no critic
-        for my $method (qw( debug info notice warning error crit emerg log) ) {
+        for my $method (qw( debug info notice warning error crit alert emerg log) ) {
             *{"$package\::$method"}   = \&$method;
         }
     }
